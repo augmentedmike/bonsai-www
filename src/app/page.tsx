@@ -34,17 +34,20 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <main className="flex flex-col items-center justify-center px-8 text-center max-w-4xl mx-auto pt-20 pb-32">
-        <div className="mb-12 relative">
-          <div className="absolute inset-0 blur-3xl bg-cyan-500/30 rounded-full"></div>
+      <main className="relative flex flex-col items-center justify-center px-8 text-center max-w-4xl mx-auto pt-20 pb-32">
+        {/* Background Image */}
+        <div className="absolute inset-0 -top-32 overflow-hidden pointer-events-none">
           <Image
-            src="/bonsai-logo.png"
-            alt="Bonsai"
-            width={120}
-            height={120}
-            className="rounded-full relative z-10"
+            src="/hero-bg.jpg"
+            alt=""
+            fill
+            className="object-cover object-top opacity-60"
+            priority
           />
         </div>
+
+        {/* Content */}
+        <div className="relative z-10">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
           Agents work on your
           <br />
@@ -71,6 +74,7 @@ export default function Home() {
           >
             View Source
           </a>
+        </div>
         </div>
       </main>
 
