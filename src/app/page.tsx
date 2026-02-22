@@ -34,16 +34,17 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <main className="relative flex flex-col items-center justify-center px-8 text-center max-w-4xl mx-auto pt-20 pb-32">
+      <main className="relative flex flex-col items-center justify-center px-8 text-center max-w-4xl mx-auto pt-20 pb-32 overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 -top-32 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 -top-32 -bottom-32 pointer-events-none">
           <Image
             src="/hero-bg.jpg"
             alt=""
             fill
-            className="object-cover object-top opacity-60"
+            className="object-cover object-top opacity-50"
             priority
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900"></div>
         </div>
 
         {/* Content */}
