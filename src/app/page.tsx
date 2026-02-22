@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900">
       {/* Nav */}
       <nav className="flex items-center justify-between px-8 py-5 max-w-6xl mx-auto w-full">
-        <div className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/bonsai-logo.png"
             alt="Bonsai"
@@ -14,8 +15,14 @@ export default function Home() {
             className="rounded-lg"
           />
           <span className="text-lg font-semibold tracking-tight text-white">Bonsai</span>
-        </div>
+        </Link>
         <div className="flex items-center gap-4">
+          <a
+            href="/see-it-in-action"
+            className="text-sm text-zinc-300 hover:text-white transition-colors"
+          >
+            See It In Action
+          </a>
           <a
             href="https://github.com/augmentedmike/bonsai-app"
             target="_blank"
@@ -35,17 +42,25 @@ export default function Home() {
 
       {/* Hero */}
       <main className="relative flex flex-col items-center justify-center px-8 text-center max-w-4xl mx-auto pt-20 pb-32 min-h-[700px]">
-        {/* Background Image */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-0 w-screen max-w-[1400px] h-[700px] pointer-events-none">
-          <Image
-            src="/hero-bg.jpg"
-            alt=""
-            fill
-            className="object-contain object-center opacity-70"
-            priority
-          />
+        {/* Background with Moon Glow */}
+        <div className="fixed left-0 right-0 top-0 w-screen h-[500px] pointer-events-none overflow-hidden -z-10">
+          {/* Glowing Moon */}
+          <div className="absolute left-1/2 top-[12%] -translate-x-1/2 w-[200px] h-[200px] rounded-full bg-gradient-to-br from-cyan-200 via-emerald-200 to-white opacity-90 blur-sm"></div>
+          <div className="absolute left-1/2 top-[12%] -translate-x-1/2 w-[180px] h-[180px] rounded-full bg-white opacity-95"></div>
+
+          {/* Bonsai Tree - Only show top portion */}
+          <div className="absolute inset-0 w-full h-full">
+            <Image
+              src="/hero-bg.jpg"
+              alt=""
+              fill
+              className="object-cover object-top opacity-80"
+              style={{ objectPosition: '50% 0%' }}
+              priority
+            />
+          </div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/10 to-slate-900 pointer-events-none"></div>
 
         {/* Content */}
         <div className="relative z-10">
@@ -60,20 +75,18 @@ export default function Home() {
           A digital team that passes the Turing test. Define tickets, preview the work, and approve when it looks right.
           All the management, planning, testing, and security is handled for you.
         </p>
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap justify-center">
           <a
-            href="#install"
+            href="/see-it-in-action"
             className="px-8 py-4 rounded-lg text-base font-semibold bg-gradient-to-r from-cyan-500 to-emerald-500 text-white hover:from-cyan-400 hover:to-emerald-400 transition-all shadow-lg shadow-cyan-500/50"
           >
-            Install Bonsai
+            See It In Action
           </a>
           <a
-            href="https://github.com/augmentedmike/bonsai-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#install"
             className="px-8 py-4 rounded-lg text-base font-semibold bg-white/10 backdrop-blur border border-white/20 text-white hover:bg-white/20 transition-colors"
           >
-            View Source
+            Install Bonsai
           </a>
         </div>
         </div>
