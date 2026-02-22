@@ -86,8 +86,8 @@ export default function Home() {
             },
             {
               step: "2",
-              title: "Live preview",
-              desc: "Your digital team automatically builds the software. Preview changes in real-time as they work.",
+              title: "Live preview & steer",
+              desc: "Your digital team automatically builds the software. Preview changes in real-time and steer features as they're being developed.",
             },
             {
               step: "3",
