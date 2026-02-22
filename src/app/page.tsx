@@ -34,18 +34,18 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <main className="relative flex flex-col items-center justify-center px-8 text-center max-w-4xl mx-auto pt-20 pb-32 min-h-[600px]">
+      <main className="relative flex flex-col items-center justify-center px-8 text-center max-w-4xl mx-auto pt-20 pb-32 min-h-[700px]">
         {/* Background Image */}
-        <div className="absolute inset-0 left-1/2 -translate-x-1/2 w-full max-w-7xl -top-20 h-[800px] pointer-events-none">
+        <div className="absolute left-1/2 -translate-x-1/2 top-0 w-screen max-w-[1400px] h-[700px] pointer-events-none">
           <Image
             src="/hero-bg.jpg"
             alt=""
             fill
-            className="object-contain object-top opacity-80"
+            className="object-contain object-center opacity-70"
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/30 to-slate-900 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900 pointer-events-none"></div>
 
         {/* Content */}
         <div className="relative z-10">
