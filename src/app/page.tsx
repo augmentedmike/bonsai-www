@@ -52,9 +52,8 @@ export default function Home() {
           </span>
         </h1>
         <p className="text-lg text-zinc-400 max-w-xl mb-10 leading-relaxed">
-          Bonsai is an AI-powered developer workspace. Create tickets, assign
-          agents, and let them write code, open PRs, and ship features
-          autonomously.
+          A digital team that passes the Turing test. Define tickets, preview the work, and approve when it looks right.
+          All the management, planning, testing, and security is handled for you.
         </p>
         <div className="flex gap-4">
           <a
@@ -82,17 +81,17 @@ export default function Home() {
             {
               step: "1",
               title: "Define tickets",
-              desc: "Describe what you need built. Features, bugs, improvements — just like any project board.",
+              desc: "Describe what you need built. That's it. No assigning, no planning, no project management.",
             },
             {
               step: "2",
-              title: "Live preview & steer",
-              desc: "Your digital team automatically builds the software. Preview changes in real-time and steer features as they're being developed.",
+              title: "Live preview",
+              desc: "Watch your digital team build the software in real-time. Steer features as they're being developed. You control when and how much.",
             },
             {
               step: "3",
-              title: "Ship it",
-              desc: "Review the work, provide feedback, and merge. That's it.",
+              title: "Approve & ship",
+              desc: "When the preview looks exactly like what you want, approve it. Everything else is handled for you.",
             },
           ].map((item) => (
             <div key={item.step} className="text-center sm:text-left">
@@ -103,6 +102,26 @@ export default function Home() {
               <p className="text-sm text-zinc-400 leading-relaxed">
                 {item.desc}
               </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* What's automated */}
+      <section className="px-8 py-16 max-w-3xl mx-auto w-full">
+        <h2 className="text-2xl font-bold text-center mb-4">All the "nerd stuff" is handled for you</h2>
+        <p className="text-center text-zinc-400 mb-10">
+          Management, communication, planning, implementation, testing, and security — completely automated.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+          {[
+            { icon: "🌳", label: "Git branches & worktrees" },
+            { icon: "📋", label: "Kanban board management" },
+            { icon: "👥", label: "Researcher, designer & developer" },
+          ].map((item) => (
+            <div key={item.label} className="rounded-xl border border-zinc-800 p-6 hover:border-zinc-700 transition-colors">
+              <div className="text-3xl mb-2">{item.icon}</div>
+              <p className="text-sm text-zinc-300">{item.label}</p>
             </div>
           ))}
         </div>
