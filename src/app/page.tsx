@@ -112,28 +112,30 @@ export default function Home() {
       <section id="install" className="px-8 py-20 max-w-3xl mx-auto w-full text-center">
         <h2 className="text-2xl font-bold mb-4">Get started</h2>
         <p className="text-zinc-400 mb-8">
-          One command installs everything — the app, the agent runner, and the
-          scheduler for your OS.
+          Fork the repo and follow the setup guide to get Bonsai running locally.
         </p>
-        <div className="rounded-xl bg-zinc-900 border border-zinc-800 p-4 text-left font-mono text-sm overflow-x-auto">
-          <span className="text-zinc-500">$</span>{" "}
-          <span className="text-emerald-400">git</span>{" "}
-          <span className="text-zinc-300">
-            clone https://github.com/augmentedmike/bonsai-app.git
-          </span>
-        </div>
-        <p className="text-xs text-zinc-500 mt-4">
-          See the{" "}
+        <div className="flex flex-col gap-3">
           <a
-            href="https://github.com/augmentedmike/bonsai-app#readme"
+            href="https://github.com/augmentedmike/bonsai-app/fork"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-emerald-400 hover:underline"
+            className="px-6 py-3 rounded-lg text-base font-medium bg-white text-black hover:bg-zinc-200 transition-colors inline-block"
           >
-            README
-          </a>{" "}
-          for setup instructions
-        </p>
+            Fork on GitHub
+          </a>
+          <p className="text-xs text-zinc-500">
+            Then see the{" "}
+            <a
+              href="https://github.com/augmentedmike/bonsai-app#readme"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-400 hover:underline"
+            >
+              README
+            </a>{" "}
+            for setup instructions
+          </p>
+        </div>
       </section>
 
 
