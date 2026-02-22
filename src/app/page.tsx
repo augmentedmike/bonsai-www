@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-6">
           <a
-            href="https://github.com/wornrockhammer/bonsai"
+            href="https://github.com/augmentedmike/bonsai-app"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-zinc-400 hover:text-white transition-colors"
@@ -64,7 +64,7 @@ export default function Home() {
             Install Bonsai
           </a>
           <a
-            href="https://github.com/wornrockhammer/bonsai"
+            href="https://github.com/augmentedmike/bonsai-app"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 rounded-lg text-base font-medium border border-zinc-700 text-zinc-300 hover:border-zinc-500 hover:text-white transition-colors"
@@ -117,49 +117,25 @@ export default function Home() {
         </p>
         <div className="rounded-xl bg-zinc-900 border border-zinc-800 p-4 text-left font-mono text-sm overflow-x-auto">
           <span className="text-zinc-500">$</span>{" "}
-          <span className="text-emerald-400">curl</span>{" "}
+          <span className="text-emerald-400">git</span>{" "}
           <span className="text-zinc-300">
-            -fsSL https://raw.githubusercontent.com/wornrockhammer/bonsai-installer/main/install.sh
-          </span>{" "}
-          <span className="text-zinc-500">|</span>{" "}
-          <span className="text-emerald-400">bash</span>
+            clone https://github.com/augmentedmike/bonsai-app.git
+          </span>
         </div>
+        <p className="text-xs text-zinc-500 mt-4">
+          See the{" "}
+          <a
+            href="https://github.com/augmentedmike/bonsai-app#readme"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-400 hover:underline"
+          >
+            README
+          </a>{" "}
+          for setup instructions
+        </p>
       </section>
 
-      {/* Repos */}
-      <section className="px-8 py-16 max-w-3xl mx-auto w-full">
-        <h2 className="text-2xl font-bold text-center mb-8">Repos</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {[
-            {
-              name: "bonsai",
-              desc: "Root — docs, website, install instructions",
-            },
-            { name: "bonsai-app", desc: "Next.js webapp — board, settings, onboarding" },
-            {
-              name: "bonsai-agent",
-              desc: "Agent loop — ticket orchestration and runner",
-            },
-            {
-              name: "bonsai-installer",
-              desc: "Installer — OS detection and scheduler setup",
-            },
-          ].map((repo) => (
-            <a
-              key={repo.name}
-              href={`https://github.com/wornrockhammer/${repo.name}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block rounded-xl border border-zinc-800 p-4 hover:border-zinc-600 transition-colors"
-            >
-              <h3 className="text-sm font-semibold font-mono mb-1">
-                {repo.name}
-              </h3>
-              <p className="text-xs text-zinc-500">{repo.desc}</p>
-            </a>
-          ))}
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="px-8 py-8 text-center text-xs text-zinc-600">
