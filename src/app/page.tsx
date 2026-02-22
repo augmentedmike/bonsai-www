@@ -81,18 +81,18 @@ export default function Home() {
           {[
             {
               step: "1",
-              title: "Planning",
-              desc: "Agents research your codebase and create detailed implementation plans. You approve before they start building.",
+              title: "Define tickets",
+              desc: "Describe what you need built. Features, bugs, improvements — just like any project board.",
             },
             {
               step: "2",
-              title: "Building",
-              desc: "Agents write code, run tests, and create pull requests. Human approval gates between research, planning, and implementation.",
+              title: "Live preview",
+              desc: "Your digital team automatically builds the software. Preview changes in real-time as they work.",
             },
             {
               step: "3",
-              title: "Shipped",
-              desc: "Review the PR, provide feedback, and merge. Agents learn from your reviews to improve future work.",
+              title: "Ship it",
+              desc: "Review the work, provide feedback, and merge. That's it.",
             },
           ].map((item) => (
             <div key={item.step} className="text-center sm:text-left">
