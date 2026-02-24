@@ -1,11 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CyclingTagline } from "./cycling-tagline";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900">
+    <div className="relative min-h-screen bg-gray-950">
+      {/* Hero background image — top only */}
+      <div className="absolute top-0 left-0 right-0 h-[900px] pointer-events-none" style={{ zIndex: 0 }}>
+        <Image
+          src="/hero-bg.jpg"
+          alt=""
+          fill
+          className="object-cover object-top opacity-90"
+          priority
+        />
+        {/* Blend bottom edge into page bg */}
+        <div className="absolute bottom-0 left-0 right-0 h-48" style={{
+          background: 'linear-gradient(to bottom, transparent, rgb(3,7,18))'
+        }} />
+      </div>
+
       {/* Nav */}
-      <nav className="flex items-center justify-between px-8 py-5 max-w-6xl mx-auto w-full">
+      <nav className="relative flex items-center justify-between px-8 py-5 max-w-6xl mx-auto w-full" style={{ zIndex: 1 }}>
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/bonsai-logo.png"
@@ -41,44 +57,22 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <main className="relative flex flex-col items-center justify-center px-8 text-center max-w-4xl mx-auto pt-20 pb-32 min-h-[700px]">
-        {/* Background with Moon Glow */}
-        <div className="fixed left-0 right-0 top-0 w-screen h-[500px] pointer-events-none overflow-hidden -z-10">
-          {/* Glowing Moon */}
-          <div className="absolute left-1/2 top-[12%] -translate-x-1/2 w-[200px] h-[200px] rounded-full bg-gradient-to-br from-cyan-200 via-emerald-200 to-white opacity-90 blur-sm"></div>
-          <div className="absolute left-1/2 top-[12%] -translate-x-1/2 w-[180px] h-[180px] rounded-full bg-white opacity-95"></div>
-
-          {/* Bonsai Tree - Only show top portion */}
-          <div className="absolute inset-0 w-full h-full">
-            <Image
-              src="/hero-bg.jpg"
-              alt=""
-              fill
-              className="object-cover object-top opacity-80"
-              style={{ objectPosition: '50% 0%' }}
-              priority
-            />
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/10 to-slate-900 pointer-events-none"></div>
+      <main className="relative flex flex-col items-center justify-center px-8 text-center max-w-4xl mx-auto pt-20 pb-32 min-h-[700px]" style={{ zIndex: 1 }}>
 
         {/* Content */}
         <div className="relative z-10">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
-          Agents work on your
-          <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
-            tickets while you sleep
-          </span>
-        </h1>
-        <p className="text-lg text-zinc-300 max-w-2xl mb-12 leading-relaxed">
-          A digital team that passes the Turing test. Define tickets, preview the work, and approve when it looks right.
-          All the management, planning, testing, and security is handled for you.
-        </p>
-        <div className="flex gap-4 flex-wrap justify-center">
+        <Image
+          src="/bonsai-logo.png"
+          alt="Bonsai"
+          width={120}
+          height={120}
+          className="mx-auto mb-14"
+        />
+        <CyclingTagline />
+        <div className="flex gap-5 flex-wrap justify-center mt-4">
           <a
             href="/see-it-in-action"
-            className="px-8 py-4 rounded-lg text-base font-semibold bg-gradient-to-r from-cyan-500 to-emerald-500 text-white hover:from-cyan-400 hover:to-emerald-400 transition-all shadow-lg shadow-cyan-500/50"
+            className="px-8 py-4 rounded-lg text-base font-semibold bg-cyan-300 text-gray-950 hover:bg-cyan-200 transition-colors shadow-lg shadow-cyan-300/30"
           >
             See It In Action
           </a>
@@ -93,9 +87,9 @@ export default function Home() {
       </main>
 
       {/* How it works */}
-      <section className="px-8 py-24 max-w-6xl mx-auto w-full">
-        <h2 className="text-3xl font-bold text-center mb-16 text-white">How it works</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <section className="relative px-8 py-28 max-w-6xl mx-auto w-full" style={{ zIndex: 2 }}>
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-20 text-white">How it works</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {[
             {
               step: "1",
@@ -114,14 +108,14 @@ export default function Home() {
             },
           ].map((item) => (
             <div key={item.step} className="text-left">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center text-lg font-bold text-cyan-400">
+              <div className="flex items-center gap-4 mb-5">
+                <div className="w-11 h-11 rounded-full bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center text-lg font-bold text-cyan-400 shrink-0">
                   {item.step}
                 </div>
-                <div className="flex-1 h-1 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-full"></div>
+                <div className="flex-1 h-px bg-white/10 rounded-full"></div>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">{item.title}</h3>
-              <p className="text-sm text-zinc-300 leading-relaxed">
+              <h3 className="text-2xl font-semibold mb-3 text-white">{item.title}</h3>
+              <p className="text-base text-zinc-400 leading-relaxed">
                 {item.desc}
               </p>
             </div>
@@ -130,9 +124,9 @@ export default function Home() {
       </section>
 
       {/* What's automated */}
-      <section className="px-8 py-24 max-w-5xl mx-auto w-full">
-        <h2 className="text-3xl font-bold text-center mb-4 text-white">All the "nerd stuff" is handled for you</h2>
-        <p className="text-center text-zinc-300 mb-12 max-w-2xl mx-auto">
+      <section className="relative px-8 py-28 max-w-5xl mx-auto w-full" style={{ zIndex: 2 }}>
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-5 text-white">All the &ldquo;nerd stuff&rdquo; is handled</h2>
+        <p className="text-center text-zinc-400 mb-14 max-w-2xl mx-auto text-lg leading-relaxed">
           Management, communication, planning, implementation, testing, and security — completely automated.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -146,23 +140,23 @@ export default function Home() {
               className="rounded-2xl bg-white/5 backdrop-blur border border-white/10 p-8 hover:bg-white/10 hover:border-white/20 transition-all text-center"
             >
               <div className="text-5xl mb-4">{item.emoji}</div>
-              <p className="text-sm text-zinc-200 font-medium">{item.label}</p>
+              <p className="text-base text-zinc-200 font-medium">{item.label}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Install */}
-      <section id="install" className="px-8 py-24 max-w-3xl mx-auto w-full text-center">
-        <h2 className="text-3xl font-bold mb-4 text-white">Get started</h2>
-        <p className="text-zinc-300 mb-10">
+      <section id="install" className="relative px-8 py-28 max-w-3xl mx-auto w-full text-center" style={{ zIndex: 2 }}>
+        <h2 className="text-4xl sm:text-5xl font-bold mb-5 text-white">Get started</h2>
+        <p className="text-zinc-400 mb-10 text-lg leading-relaxed">
           Fork the repo and follow the setup guide to get Bonsai running locally.
         </p>
         <a
           href="https://github.com/augmentedmike/bonsai-app/fork"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block w-full sm:w-auto px-12 py-4 rounded-xl text-lg font-semibold bg-gradient-to-r from-cyan-500 to-emerald-500 text-white hover:from-cyan-400 hover:to-emerald-400 transition-all shadow-lg shadow-cyan-500/50"
+          className="inline-block w-full sm:w-auto px-12 py-4 rounded-xl text-lg font-semibold bg-cyan-300 text-gray-950 hover:bg-cyan-200 transition-colors shadow-lg shadow-cyan-300/30"
         >
           Fork on GitHub
         </a>
@@ -172,7 +166,7 @@ export default function Home() {
             href="https://github.com/augmentedmike/bonsai-app#readme"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-emerald-400 hover:underline"
+            className="text-teal-400 hover:underline"
           >
             README
           </a>{" "}
@@ -181,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="px-8 py-12 text-center text-sm text-zinc-500 border-t border-white/5">
+      <footer className="relative px-8 py-12 text-center text-sm text-zinc-500 border-t border-white/5" style={{ zIndex: 2 }}>
         Bonsai — Open source, built with Next.js and Claude.
       </footer>
     </div>
