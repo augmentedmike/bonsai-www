@@ -393,12 +393,12 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    href="https://bonsai-www.vercel.app"
+                    href="https://usebonsai.org"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-zinc-500 hover:text-white transition-colors"
                   >
-                    Bonsai Web
+                    usebonsai.org
                   </a>
                 </li>
               </ul>
