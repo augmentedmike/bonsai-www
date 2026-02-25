@@ -13,9 +13,42 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bonsai — AI-powered developer workspace",
+  metadataBase: new URL("https://bonsai-www.vercel.app"),
+  title: "Bonsai — The kanban board that not can but does",
   description:
-    "Agents work on your tickets while you sleep. Automated task orchestration for software teams.",
+    "Bonsai is an AI-powered kanban board where digital workers build your software for you. Describe what you want. Watch it get built.",
+  openGraph: {
+    title: "Bonsai — The kanban board that not can but does",
+    description:
+      "An AI-powered kanban board where digital workers — researchers, designers, developers — execute your tickets autonomously. You describe it. They build it.",
+    url: "https://bonsai-www.vercel.app",
+    siteName: "Bonsai",
+    images: [
+      {
+        url: "/hero-bg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bonsai — AI-powered kanban board",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bonsai — The kanban board that not can but does",
+    description:
+      "AI workers build your software while you sleep. Define tickets. Watch them ship.",
+    images: ["/hero-bg.jpg"],
+  },
+  keywords: [
+    "AI development team",
+    "autonomous software development",
+    "kanban AI",
+    "AI coding agent",
+    "no-code development",
+    "digital workers",
+    "open source",
+  ],
 };
 
 export default function RootLayout({

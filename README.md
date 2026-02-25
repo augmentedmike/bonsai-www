@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bonsai — The kanban board that not can but does
 
-## Getting Started
+> Describe what you want. Your AI team builds it.
 
-First, run the development server:
+Bonsai is an open source, AI-powered kanban board where digital workers — researchers, designers, developers — autonomously execute your tickets. From research through live preview, the whole development cycle runs without you lifting a finger.
+
+## What it does
+
+1. **Build your team** — Create AI workers with custom names, skills, and personalities
+2. **Write a ticket** — Plain English. One sentence or ten. Your team figures out the rest.
+3. **Review and ship** — Watch the live preview. Approve what looks right. That's the job.
+
+## Who it's for
+
+- Solo founders who want to ship without hiring
+- Developers who want to move faster on the boring stuff
+- Small teams who want 10x output without 10x headcount
+
+## Live site
+
+[bonsai-www.vercel.app](https://bonsai-www.vercel.app)
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Opens on http://localhost:3010
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 15 (App Router)
+- Tailwind CSS v4
+- TypeScript
+- Deployed on Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Related
 
-## Learn More
+- [bonsai-app](https://github.com/augmentedmike/bonsai-app) — The full Bonsai application (the actual AI kanban board)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open source. Built in Austin, TX.
