@@ -12,8 +12,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_HOST
+  ? `https://${process.env.NEXT_PUBLIC_HOST}`
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bonsai-www.vercel.app"),
+  metadataBase: new URL(siteUrl),
   title: "Bonsai — The kanban board that not can but does",
   description:
     "Bonsai is an AI-powered kanban board where digital workers build your software for you. Describe what you want. Watch it get built.",
@@ -21,7 +25,7 @@ export const metadata: Metadata = {
     title: "Bonsai — The kanban board that not can but does",
     description:
       "An AI-powered kanban board where digital workers — researchers, designers, developers — execute your tickets autonomously. You describe it. They build it.",
-    url: "https://bonsai-www.vercel.app",
+    url: siteUrl,
     siteName: "Bonsai",
     images: [
       {
