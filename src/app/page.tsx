@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CyclingTagline } from "./cycling-tagline";
 import { StickyNav } from "./sticky-nav";
+import { MiniClawPowered } from "./miniclaw-powered";
 
 const features = [
   {
@@ -273,6 +274,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* MiniClaw cross-reference */}
+      <MiniClawPowered />
 
       {/* Get Started */}
       <section
