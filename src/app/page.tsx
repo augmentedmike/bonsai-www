@@ -34,12 +34,6 @@ export default function Home() {
         </Link>
         <div className="flex items-center gap-4">
           <a
-            href="/see-it-in-action"
-            className="text-sm text-zinc-300 hover:text-white transition-colors"
-          >
-            See It In Action
-          </a>
-          <a
             href="https://github.com/augmentedmike/bonsai-app"
             target="_blank"
             rel="noopener noreferrer"
@@ -61,21 +55,9 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10">
-        <Image
-          src="/bonsai-logo.png"
-          alt="Bonsai"
-          width={120}
-          height={120}
-          className="mx-auto mb-14"
-        />
+        <div className="mb-14 h-[120px]" />
         <CyclingTagline />
         <div className="flex gap-5 flex-wrap justify-center mt-4">
-          <a
-            href="/see-it-in-action"
-            className="px-8 py-4 rounded-lg text-base font-semibold bg-cyan-300 text-gray-950 hover:bg-cyan-200 transition-colors shadow-lg shadow-cyan-300/30"
-          >
-            See It In Action
-          </a>
           <a
             href="#install"
             className="px-8 py-4 rounded-lg text-base font-semibold bg-white/10 backdrop-blur border border-white/20 text-white hover:bg-white/20 transition-colors"
@@ -88,39 +70,64 @@ export default function Home() {
 
       {/* How it works */}
       <section className="relative px-8 py-28 max-w-6xl mx-auto w-full" style={{ zIndex: 2 }}>
-        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-20 text-white">How it works</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-          {[
-            {
-              step: "1",
-              title: "Define tickets",
-              desc: "Describe what you need built. That's it. No assigning, no planning, no project management.",
-            },
-            {
-              step: "2",
-              title: "Live preview",
-              desc: "Watch your digital team build the software in real-time. Steer features as they're being developed. You control when and how much.",
-            },
-            {
-              step: "3",
-              title: "Approve & ship",
-              desc: "When the preview looks exactly like what you want, approve it. Everything else is handled for you.",
-            },
-          ].map((item) => (
-            <div key={item.step} className="text-left">
-              <div className="flex items-center gap-4 mb-5">
-                <div className="w-11 h-11 rounded-full bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center text-lg font-bold text-cyan-400 shrink-0">
-                  {item.step}
-                </div>
-                <div className="flex-1 h-px bg-white/10 rounded-full"></div>
-              </div>
-              <h3 className="text-2xl font-semibold mb-3 text-white">{item.title}</h3>
-              <p className="text-base text-zinc-400 leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-          ))}
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4 text-white">How it works</h2>
+        <p className="text-center text-zinc-400 mb-16 max-w-2xl mx-auto text-lg">
+          Instead of writing code to build digital solutions, you speak them into creation.
+        </p>
+
+        {/* Step 1 — Create a Project */}
+        <div className="flex flex-col items-center">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center text-sm font-bold text-white shrink-0">1</span>
+            <h3 className="text-2xl font-bold text-white">Create a Project</h3>
+          </div>
+          <p className="text-base text-zinc-400 leading-relaxed max-w-lg text-center mb-6">Create an isolated environment where you can define the problem space and create the solution via digital labor and a kanban board.</p>
+          <img src="/screenshots/how-it-works/step-1-create-project.png" alt="Create a project" width={519} height={416} />
         </div>
+
+        {/* Step 2 — Create Your Perfect Digital Coworkers */}
+        <div className="flex flex-col items-center mt-24">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center text-sm font-bold text-white shrink-0">2</span>
+            <h3 className="text-2xl font-bold text-white">Create Your Perfect Digital Coworkers</h3>
+          </div>
+          <div className="flex gap-4 flex-wrap justify-center">
+            <img src="/screenshots/how-it-works/team-avatar-2.png" alt="Persona" width={371} height={256} />
+            <img src="/screenshots/how-it-works/team-avatar-1.png" alt="Persona" width={395} height={252} />
+            <img src="/screenshots/how-it-works/persona-2.png" alt="Persona" width={365} height={253} />
+            <img src="/screenshots/how-it-works/persona-1.png" alt="Persona" width={350} height={245} />
+          </div>
+        </div>
+
+        {/* Step 3 — Use a Kanban Board */}
+        <div className="flex flex-col items-center mt-24">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center text-sm font-bold text-white shrink-0">3</span>
+            <h3 className="text-2xl font-bold text-white">Use a Kanban Board to Shape Your Project</h3>
+          </div>
+          <img src="/screenshots/how-it-works/kanban-board.png" alt="Kanban board" className="max-w-4xl w-full h-auto" />
+        </div>
+
+        {/* Step 4 — Tickets */}
+        <div className="flex flex-col items-center mt-24">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center text-sm font-bold text-white shrink-0">4</span>
+            <h3 className="text-2xl font-bold text-white">Tickets — Change Requests Made Simple</h3>
+          </div>
+          <p className="text-base text-zinc-400 leading-relaxed max-w-lg text-center mb-6">Tickets are described in simple English (multilingual coming soon!) and can be entered via voice.</p>
+          <img src="/screenshots/how-it-works/step-4-ticket-description.png" alt="Ticket description" width={1042} height={320} className="max-w-3xl w-full h-auto" />
+          <p className="text-base text-zinc-400 leading-relaxed max-w-lg text-center mt-8 mb-6">Title and acceptance criteria are automatically generated from the detailed description.</p>
+          <img src="/screenshots/how-it-works/step-4-auto-complete.png" alt="Auto-completed title and criteria" width={1150} height={398} className="max-w-3xl w-full h-auto" />
+          <p className="text-base text-zinc-400 leading-relaxed max-w-lg text-center mt-8 mb-6">Ticket view, chat, details, attachments, and agent artifacts like the Research and Implementation plan.</p>
+          <img src="/screenshots/how-it-works/step-4-ticket-view.png" alt="Ticket view with documents and chat" width={1598} height={783} className="max-w-5xl w-full h-auto" />
+          <p className="text-base text-zinc-400 leading-relaxed max-w-lg text-center mt-8 mb-6">Epic ticket support and tickets can be put on hold with a click.</p>
+          <img src="/screenshots/how-it-works/step-4-ticket-card.png" alt="Ticket card with epic and hold" width={465} height={460} />
+          <p className="text-base text-zinc-400 leading-relaxed max-w-lg text-center mt-8 mb-6">Live view the project files.</p>
+          <img src="/screenshots/how-it-works/step-4-file-viewer.png" alt="File viewer" width={1079} height={661} className="max-w-4xl w-full h-auto" />
+          <p className="text-base text-zinc-400 leading-relaxed max-w-lg text-center mt-8 mb-6">Make comments on tickets to discuss the ticket or request changes.</p>
+          <img src="/screenshots/how-it-works/step-4-ticket-chat.png" alt="Ticket chat" width={380} height={684} />
+        </div>
+
       </section>
 
       {/* What's automated */}
@@ -175,8 +182,37 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="relative px-8 py-12 text-center text-sm text-zinc-500 border-t border-white/5" style={{ zIndex: 2 }}>
-        Bonsai — Open source, built with Next.js and Claude.
+      <footer className="relative px-8 py-12 border-t border-white/5 text-sm text-zinc-500" style={{ zIndex: 2 }}>
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+          <p>Bonsai — Open source, built with Next.js and Claude.</p>
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <span className="text-zinc-600 uppercase tracking-widest text-xs font-semibold">Ecosystem</span>
+            <div className="flex items-center gap-4">
+              <Link
+                href="/"
+                className="hover:text-zinc-300 transition-colors"
+              >
+                Bonsai
+              </Link>
+              <a
+                href="https://miniclaw.bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-zinc-300 transition-colors"
+              >
+                MiniClaw
+              </a>
+              <a
+                href="https://blog.augmentedmike.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-zinc-300 transition-colors"
+              >
+                AugmentedMike Blog
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
