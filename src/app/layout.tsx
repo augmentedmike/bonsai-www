@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   title: "Bonsai — AI-powered developer workspace",
   description:
     "Agents work on your tickets while you sleep. Automated task orchestration for software teams.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+  },
 };
 
 export default function RootLayout({
