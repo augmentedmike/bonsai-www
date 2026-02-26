@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 const HOST = process.env.NEXT_PUBLIC_HOST ?? "https://bonsai-www.vercel.app";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(HOST),
   title: "Bonsai — The kanban board that not only can, but does",
   description:
     "Bonsai is an AI-powered kanban board where your AI team — researchers, designers, developers — builds software for you. Describe it. Watch it ship.",
-  metadataBase: new URL(HOST),
   alternates: {
     canonical: "/",
   },
@@ -28,6 +28,15 @@ export const metadata: Metadata = {
       { url: "/favicon.ico" },
     ],
   },
+  keywords: [
+    "AI development team",
+    "autonomous software development",
+    "kanban AI",
+    "AI coding agent",
+    "no-code development",
+    "digital workers",
+    "open source",
+  ],
   openGraph: {
     type: "website",
     url: HOST,

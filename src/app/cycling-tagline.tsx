@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 
 const taglines = [
-  { line1: "Stop writing code.", line2: "Shape it instead." },
-  { line1: "Build software", line2: "while you are asleep." },
-  { line1: "A Kanban board powering", line2: "digital labor." },
-  { line1: "Build real software", line2: "using digital labor." },
+  { line1: "Not a chatbot.", line2: "A development team." },
+  { line1: "Software ships", line2: "while you sleep." },
+  { line1: "The Kanban board that", line2: "not only can, but does." },
+  { line1: "Your AI team", line2: "runs while you don't." },
 ];
 
 export function CyclingTagline() {
@@ -26,7 +26,7 @@ export function CyclingTagline() {
 
   return (
     <h1
-      className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-12 transition-opacity duration-400"
+      className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 transition-opacity duration-400"
       style={{
         textShadow: "0 2px 20px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.9)",
         opacity: visible ? 1 : 0,
