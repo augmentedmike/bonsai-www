@@ -1,5 +1,43 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+const HOST = process.env.NEXT_PUBLIC_HOST ?? "https://bonsai-www.vercel.app";
+
+export const metadata: Metadata = {
+  title: "See It In Action — Bonsai",
+  description:
+    "Watch how Bonsai's AI team handles everything autonomously — from ticket creation to research, planning, implementation, and shipping.",
+  alternates: {
+    canonical: "/see-it-in-action",
+  },
+  openGraph: {
+    type: "website",
+    url: `${HOST}/see-it-in-action`,
+    siteName: "Bonsai",
+    title: "See It In Action — Bonsai",
+    description:
+      "Watch how Bonsai's AI team handles everything autonomously — from ticket creation to research, planning, implementation, and shipping.",
+    images: [
+      {
+        url: `${HOST}/hero-bg.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Bonsai — AI-powered kanban board in action",
+      },
+    ],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "See It In Action — Bonsai",
+    description:
+      "Watch how Bonsai's AI team handles everything autonomously — from ticket creation to research, planning, implementation, and shipping.",
+    images: [`${HOST}/hero-bg.jpg`],
+    site: "@augmentedmike",
+    creator: "@augmentedmike",
+  },
+};
 
 export default function SeeItInAction() {
   return (

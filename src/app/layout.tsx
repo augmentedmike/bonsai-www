@@ -12,15 +12,63 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const HOST = process.env.NEXT_PUBLIC_HOST ?? "https://bonsai-www.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Bonsai — AI-powered developer workspace",
+  title: "Bonsai — The kanban board that not only can, but does",
   description:
-    "Agents work on your tickets while you sleep. Automated task orchestration for software teams.",
+    "Bonsai is an AI-powered kanban board where your AI team — researchers, designers, developers — builds software for you. Describe it. Watch it ship.",
+  metadataBase: new URL(HOST),
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico" },
     ],
+  },
+  openGraph: {
+    type: "website",
+    url: HOST,
+    siteName: "Bonsai",
+    title: "Bonsai — The kanban board that not only can, but does",
+    description:
+      "An AI-powered kanban board where digital workers — researchers, designers, developers — execute your tickets autonomously. You describe it. They build it.",
+    images: [
+      {
+        url: `${HOST}/hero-bg.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Bonsai — AI-powered kanban board",
+      },
+    ],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bonsai — The kanban board that not only can, but does",
+    description:
+      "An AI-powered kanban board where digital workers — researchers, designers, developers — execute your tickets autonomously. You describe it. They build it.",
+    images: [`${HOST}/hero-bg.jpg`],
+    site: "@augmentedmike",
+    creator: "@augmentedmike",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Bonsai",
+  description:
+    "An AI-powered kanban board where digital workers execute your tickets autonomously.",
+  url: HOST,
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "Web",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
   },
 };
 
@@ -31,6 +79,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

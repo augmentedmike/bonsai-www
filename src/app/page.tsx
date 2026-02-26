@@ -92,10 +92,10 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-white">Create Your Perfect Digital Coworkers</h3>
           </div>
           <div className="flex gap-4 flex-wrap justify-center">
-            <img src="/screenshots/how-it-works/team-avatar-2.png" alt="Persona" width={371} height={256} />
-            <img src="/screenshots/how-it-works/team-avatar-1.png" alt="Persona" width={395} height={252} />
-            <img src="/screenshots/how-it-works/persona-2.png" alt="Persona" width={365} height={253} />
-            <img src="/screenshots/how-it-works/persona-1.png" alt="Persona" width={350} height={245} />
+            <img src="/screenshots/how-it-works/team-avatar-2.png" alt="AI digital coworker avatar — customizable appearance" width={371} height={256} />
+            <img src="/screenshots/how-it-works/team-avatar-1.png" alt="AI digital coworker avatar — unique persona" width={395} height={252} />
+            <img src="/screenshots/how-it-works/persona-2.png" alt="Digital coworker persona configuration screen" width={365} height={253} />
+            <img src="/screenshots/how-it-works/persona-1.png" alt="Digital coworker personality and role settings" width={350} height={245} />
           </div>
         </div>
 
