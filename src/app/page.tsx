@@ -106,13 +106,6 @@ export default async function Home() {
         </div>
       </main>
 
-      {/* Social proof bar */}
-      <div className="relative border-y border-white/5 py-6 px-8" style={{ zIndex: 2 }}>
-        <p className="text-center text-sm text-zinc-300">
-          Open source · Built with Next.js and Claude · Running in production
-        </p>
-      </div>
-
       {/* Showcase: Team Roster */}
       <section className="relative px-8 py-28 max-w-6xl mx-auto w-full" style={{ zIndex: 2 }}>
         <div className="text-center mb-16">
