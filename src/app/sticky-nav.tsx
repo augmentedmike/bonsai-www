@@ -47,6 +47,12 @@ export function StickyNav() {
           >
             GitHub
           </a>
+          <Link
+            href="/support"
+            className="text-sm text-zinc-300 hover:text-white transition-colors"
+          >
+            Support
+          </Link>
           <a
             href="#get-started"
             className={`text-sm font-medium rounded-lg bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 ${
