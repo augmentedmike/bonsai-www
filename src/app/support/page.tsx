@@ -212,34 +212,43 @@ export default function SupportPage() {
             >
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500/20 to-pink-500/5 border border-pink-500/20 flex items-center justify-center shrink-0">
-                  <span className="text-2xl font-black text-pink-400">A</span>
+                  <span className="text-2xl font-black text-pink-400">$</span>
                 </div>
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white">Invest in Bonsai &amp; MiniClaw</h2>
-                  <p className="text-sm text-zinc-500">For larger contributions via SAFE</p>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white">Invest in the future of digital labor</h2>
+                  <p className="text-sm text-zinc-500">Seed &amp; Angel investment via SAFE &middot; Open to everyone</p>
                 </div>
               </div>
 
               <div className="space-y-5 text-base text-zinc-400 leading-relaxed mb-10">
                 <p>
-                  For supporters who want to go beyond a one-time contribution, we offer investment via a <strong className="text-white font-semibold">SAFE</strong> (Simple Agreement for Future Equity) — the same instrument used by Y Combinator and most Silicon Valley startups to raise early-stage capital.
+                  We&apos;re raising Seed and Angel capital &mdash; and we&apos;re doing it differently. We believe the opportunity to invest in the future of autonomous software should be <strong className="text-white font-semibold">accessible to everyone</strong>, not just Silicon Valley insiders. That&apos;s why we&apos;re using <strong className="text-white font-semibold">SAFEs</strong> (Simple Agreements for Future Equity) &mdash; the same instrument Y Combinator created to democratize early-stage investing.
                 </p>
                 <p>
-                  A SAFE isn&apos;t a loan and it isn&apos;t stock — it&apos;s an agreement that converts into equity at a future priced round. No interest, no maturity date, no board seats required. It&apos;s the simplest, founder-friendliest way to invest in an early-stage company.
+                  A SAFE isn&apos;t a loan and it isn&apos;t stock. It&apos;s an agreement that converts into equity at a future priced round. No interest, no maturity date, no board seats required. Airbnb, Dropbox, Stripe, Coinbase &mdash; they all raised their earliest capital this way. It&apos;s the simplest, founder-friendliest instrument in startup investing.
                 </p>
+
+                {/* Democratized investment callout */}
+                <div className="rounded-xl border border-pink-500/15 bg-pink-500/[0.04] p-6 my-2">
+                  <p className="text-pink-300 font-semibold text-lg mb-2">Anyone can invest up to $15,000</p>
+                  <p className="text-zinc-400 text-sm leading-relaxed">
+                    We&apos;re democratizing access to early-stage investment. You don&apos;t need to be an accredited investor or know the right people. If you believe in what we&apos;re building, you can own a piece of it &mdash; starting at whatever amount feels right for you, up to $15k via SAFE.
+                  </p>
+                </div>
+
                 <p>
-                  This is how the biggest companies in tech got their start. Airbnb, Dropbox, Stripe, Coinbase — they all raised their earliest capital on SAFEs. It was created by Y Combinator in 2013 to standardize early-stage investing and remove the friction of traditional convertible notes. Today it&apos;s the default instrument for Silicon Valley seed rounds.
+                  We&apos;re also open to larger capital partnerships and institutional investors when the relationship is right and it furthers our core mission: <strong className="text-white font-semibold">democratizing digital labor</strong>. We&apos;re not looking for investors who want to lock this behind a paywall. We&apos;re looking for partners who believe open source AI teams should be available to everyone.
                 </p>
                 <p className="text-zinc-300 font-medium">
-                  If you believe in open source AI, autonomous digital labor, and the future we&apos;re building — reach out to AugmentedMike to discuss terms.
+                  Whether you&apos;re investing $500 or leading a round &mdash; reach out to AugmentedMike to start the conversation.
                 </p>
               </div>
 
               {/* How it works mini-explainer */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
                 {[
-                  { step: "1", title: "You invest", desc: "Send funds under a signed SAFE agreement." },
-                  { step: "2", title: "We build", desc: "Your capital funds infrastructure, growth, and development." },
+                  { step: "1", title: "Reach out", desc: "Contact AugmentedMike to discuss terms and get a SAFE agreement." },
+                  { step: "2", title: "We build", desc: "Your capital funds compute, infrastructure, and development." },
                   { step: "3", title: "It converts", desc: "When we raise a priced round, your SAFE converts to equity at a discount." },
                 ].map((s) => (
                   <div key={s.step} className="rounded-lg border border-white/5 p-5 bg-white/[0.02]">
@@ -252,7 +261,7 @@ export default function SupportPage() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="mailto:augmentedmike@gmail.com?subject=Bonsai%20SAFE%20Investment"
+                  href="mailto:augmentedmike@gmail.com?subject=Bonsai%20%26%20MiniClaw%20Investment"
                   className="px-8 py-4 rounded-xl text-base font-semibold bg-pink-500/10 border border-pink-500/20 text-pink-400 hover:bg-pink-500/20 transition-colors text-center"
                 >
                   Contact AugmentedMike
