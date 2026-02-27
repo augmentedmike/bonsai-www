@@ -24,7 +24,7 @@ export function StickyNav() {
       <div className="flex items-center justify-between px-8 max-w-6xl mx-auto w-full">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/bonsai-logo.png"
+            src="/bonsai-logo-v2.png"
             alt="Bonsai"
             width={32}
             height={32}

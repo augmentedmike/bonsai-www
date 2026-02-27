@@ -6,7 +6,7 @@ const taglines = [
   { line1: "Not a chatbot.", line2: "A development team." },
   { line1: "Software ships", line2: "while you sleep." },
   { line1: "The Kanban board that", line2: "not only can, but does." },
-  { line1: "Your AI team", line2: "runs while you don't." },
+  { line1: "Your Sims", line2: "run while you don't." },
 ];
 
 export function CyclingTagline() {
