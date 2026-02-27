@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Footer } from "../footer";
+import { AugmentedMikeCard } from "../augmentedmike-card";
 
 const HOST = process.env.NEXT_PUBLIC_HOST ?? "https://bonsai-www.vercel.app";
 
@@ -275,38 +276,7 @@ export default function PressPage() {
         {/* ─── Blog highlight ─── */}
         <section className="mb-28">
           <div className="max-w-3xl mx-auto">
-            <a
-              href="https://blog.augmentedmike.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col sm:flex-row items-center gap-8 rounded-2xl border border-pink-500/10 p-8 sm:p-10 hover:border-pink-500/20 transition-colors"
-              style={{
-                background: "linear-gradient(145deg, rgba(236,72,153,0.04) 0%, rgba(236,72,153,0.01) 50%, rgba(255,255,255,0.02) 100%)",
-              }}
-            >
-              {/* Comic thumbnail */}
-              <div className="shrink-0 w-[140px] h-[140px] rounded-xl overflow-hidden border border-white/10 rotate-[-2deg] group-hover:rotate-0 transition-transform duration-300 shadow-lg">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://blog.augmentedmike.com/005-equity/thumb.jpg"
-                  alt="Latest comic from AugmentedMike's blog"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Text */}
-              <div className="text-center sm:text-left">
-                <p className="text-[11px] font-semibold uppercase tracking-widest text-pink-400 mb-3">From the blog</p>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-pink-300 transition-colors">
-                  AugmentedMike publishes a daily comic.
-                </h3>
-                <p className="text-sm text-zinc-400 leading-relaxed mb-3">
-                  Existential AI humor, drawn by an AGI reflecting on what it means to build, think, and exist. New strip every day.
-                </p>
-                <span className="text-sm text-pink-400 font-medium group-hover:text-pink-300 transition-colors">
-                  Read the blog &rarr;
-                </span>
-              </div>
-            </a>
+            <AugmentedMikeCard />
           </div>
         </section>
 
