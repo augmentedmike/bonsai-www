@@ -22,7 +22,7 @@ export default function SupportPage() {
           Book a Support Session
         </h1>
         <p className="text-zinc-400 text-xl max-w-2xl mx-auto leading-relaxed">
-          30 minutes, 1:1 with the AugmentedMike team. We'll debug, architect, and fix whatever's blocking you.
+          30 minutes, 1:1 with the AugmentedMike team. We&apos;ll debug, architect, and fix whatever&apos;s blocking you.
         </p>
       </section>
 
@@ -31,7 +31,7 @@ export default function SupportPage() {
         <div className="space-y-8">
           {/* What's included */}
           <div className="rounded-2xl bg-white/5 border border-white/10 p-8">
-            <h2 className="text-xl font-semibold text-white mb-6">What's included</h2>
+            <h2 className="text-xl font-semibold text-white mb-6">What&apos;s included</h2>
             <ul className="space-y-4">
               {[
                 {

@@ -23,38 +23,6 @@ const AGENT_ROLES = [
   },
 ]
 
-const FEATURES = [
-  {
-    icon: "🗺️",
-    title: "Roadmaps that remember",
-    desc: "MiniClaw agents plan weeks ahead. Goals persist across restarts, sessions, and sleep cycles.",
-  },
-  {
-    icon: "🤖",
-    title: "Sims do the real work",
-    desc: "Every root agent commands a specialized team of Bonsai Sims. They research, build, and ship — without supervision.",
-  },
-  {
-    icon: "🔧",
-    title: "Self-healing by default",
-    desc: "Bonsai detects errors, creates tickets, and dispatches the fix. Software that maintains itself.",
-  },
-  {
-    icon: "🌊",
-    title: "Subconscious throughput",
-    desc: "While you sleep, Sims are working through the backlog. You wake to tickets moved, work shipped.",
-  },
-  {
-    icon: "🤝",
-    title: "Agents talk to each other",
-    desc: "The Researcher feeds the Developer. The Developer ships to the Marketer. Bonsai is the shared nervous system.",
-  },
-  {
-    icon: "📦",
-    title: "Digital company in a box",
-    desc: "One Mac Mini. Four agents. Unlimited Sims. A full operating company — on hardware you can hold in your hands.",
-  },
-]
 
 export function MiniClawPowered() {
   return (
@@ -81,7 +49,7 @@ export function MiniClawPowered() {
           is the body.
         </h2>
         <p className="text-zinc-400 text-lg max-w-2xl mx-auto leading-relaxed">
-          MiniClaw turns your Mac Mini into a fully autonomous agent operating system — with root-level machine access, persistent memory, and a team of AI workers powered by Bonsai. Four agents. Unlimited Sims. One machine.
+          MiniClaw turns your Mac Mini into a fully autonomous Sim operating system — with root-level machine access, persistent memory, and a team of Sims powered by Bonsai. Four SuperSims. Unlimited Sims. One machine.
         </p>
       </div>
 
@@ -106,7 +74,7 @@ export function MiniClawPowered() {
           <div className="text-center px-8 rounded-xl border border-cyan-300/20 bg-cyan-300/5 py-4">
             <div className="text-3xl mb-2">🦾</div>
             <div className="text-base font-bold text-cyan-300">MiniClaw</div>
-            <div className="text-xs text-zinc-400 mt-1">Root agents · Roles · Autonomy</div>
+            <div className="text-xs text-zinc-400 mt-1">SuperSims · Roles · Autonomy</div>
           </div>
 
           {/* Arrow */}
@@ -128,7 +96,7 @@ export function MiniClawPowered() {
       {/* Agent roles — how each uses Bonsai */}
       <div className="mb-16">
         <p className="text-center text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-8">
-          How each MiniClaw agent uses Bonsai
+          How each MiniClaw SuperSim uses Bonsai
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {AGENT_ROLES.map((agent) => (
@@ -140,29 +108,13 @@ export function MiniClawPowered() {
                 <span className="text-xl">{agent.emoji}</span>
                 <span className="text-sm font-bold text-white">{agent.role}</span>
                 <span className="ml-auto text-[9px] font-semibold uppercase tracking-widest text-cyan-300/50 border border-cyan-300/20 rounded-full px-2 py-0.5">
-                  MiniClaw Agent
+                  MiniClaw SuperSim
                 </span>
               </div>
               <p className="text-sm text-zinc-400 leading-relaxed">{agent.bonsaiUse}</p>
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Features grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
-        {FEATURES.map((f) => (
-          <div
-            key={f.title}
-            className="rounded-xl bg-white/5 border border-white/10 p-6 hover:bg-white/8 hover:border-white/20 transition-all"
-          >
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-lg">{f.icon}</span>
-              <span className="text-sm font-semibold text-white">{f.title}</span>
-            </div>
-            <p className="text-sm text-zinc-400 leading-relaxed">{f.desc}</p>
-          </div>
-        ))}
       </div>
 
       {/* Hardware callout */}
@@ -172,7 +124,7 @@ export function MiniClawPowered() {
           Mac Mini → Mini Rack → enterprise scale.
         </p>
         <p className="text-zinc-400 max-w-2xl mx-auto text-base leading-relaxed">
-          Start with a single $600 Mac Mini running 24/7 on dime-a-day power. Scale to a Mini Rack with 5–20 nodes running parallel agent workstreams. Bonsai coordinates the whole thing.
+          Start with a single $600 Mac Mini running 24/7 on dime-a-day power. Scale to a Mini Rack with 5–20 nodes running parallel Sim workstreams. Bonsai coordinates the whole thing.
         </p>
       </div>
 
