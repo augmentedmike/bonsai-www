@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SmoothScroll } from "./smooth-scroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(HOST),
   title: "Bonsai — The kanban board that not only can, but does",
   description:
-    "Bonsai is an AI-powered kanban board where your AI team — researchers, designers, developers — builds software for you. Describe it. Watch it ship.",
+    "Bonsai is an AI-powered kanban board where your Sims — researchers, designers, developers — build software for you. Describe it. Watch it ship.",
   alternates: {
     canonical: "/",
   },
@@ -27,14 +28,15 @@ export const metadata: Metadata = {
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico" },
     ],
+    apple: "/apple-touch-icon.png",
   },
   keywords: [
     "AI development team",
     "autonomous software development",
     "kanban AI",
-    "AI coding agent",
+    "AI coding Sim",
     "no-code development",
-    "digital workers",
+    "digital labor",
     "open source",
   ],
   openGraph: {
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Bonsai",
     title: "Bonsai — The kanban board that not only can, but does",
     description:
-      "An AI-powered kanban board where digital workers — researchers, designers, developers — execute your tickets autonomously. You describe it. They build it.",
+      "An AI-powered kanban board where Sims — researchers, designers, developers — execute your tickets autonomously. You describe it. They build it.",
     images: [
       {
         url: `${HOST}/hero-bg.jpg`,
@@ -58,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bonsai — The kanban board that not only can, but does",
     description:
-      "An AI-powered kanban board where digital workers — researchers, designers, developers — execute your tickets autonomously. You describe it. They build it.",
+      "An AI-powered kanban board where Sims — researchers, designers, developers — execute your tickets autonomously. You describe it. They build it.",
     images: [`${HOST}/hero-bg.jpg`],
     site: "@augmentedmike",
     creator: "@augmentedmike",
@@ -70,7 +72,7 @@ const jsonLd = {
   "@type": "SoftwareApplication",
   name: "Bonsai",
   description:
-    "An AI-powered kanban board where digital workers execute your tickets autonomously.",
+    "An AI-powered kanban board where Sims execute your tickets autonomously.",
   url: HOST,
   applicationCategory: "DeveloperApplication",
   operatingSystem: "Web",
@@ -97,6 +99,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <SmoothScroll />
         {children}
       </body>
     </html>
