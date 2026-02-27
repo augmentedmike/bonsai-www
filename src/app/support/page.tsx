@@ -52,10 +52,10 @@ export default function SupportPage() {
         <div className="relative z-10">
           <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-6">Open Source Forever</p>
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight mb-6 text-white">
-            Help us keep<br />Bonsai alive.
+            Help us keep Bonsai<br />and MiniClaw alive.
           </h1>
           <p className="text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-            Bonsai is free. No premium tiers, no gated features, no catch. But open source doesn&apos;t mean zero cost. Servers run, APIs bill, and the Sims never sleep. Your support keeps all of it going.
+            Bonsai and MiniClaw are free. No premium tiers, no gated features, no catch. But open source doesn&apos;t mean zero cost. Servers run, APIs bill, and the Sims never sleep. Your support keeps all of it going.
           </p>
         </div>
       </header>
@@ -74,16 +74,49 @@ export default function SupportPage() {
               <h2 className="text-3xl font-bold text-white mb-6">Why we need support right now</h2>
               <div className="space-y-5 text-base text-zinc-400 leading-relaxed">
                 <p>
-                  Bonsai went from first commit to production in 22 days. It&apos;s building itself, dogfooding its own features, and shipping faster than we ever imagined. But we&apos;re at an inflection point.
+                  Bonsai and MiniClaw went from first commit to production in 22 days. They&apos;re building themselves, dogfooding their own features, and shipping faster than we ever imagined. But we&apos;re at an inflection point.
                 </p>
                 <p>
-                  Right now, Bonsai runs on a single Mac Mini, one Claude Max subscription, and sheer stubbornness. That&apos;s enough to prove the concept — but not enough to serve a community. We need to scale compute, harden the infrastructure, and keep the API bills paid while we grow.
+                  Right now, both projects run on a single Mac Mini, one Claude Max subscription, and sheer stubbornness. That&apos;s enough to prove the concept — but not enough to serve a community. We need to scale compute, harden the infrastructure, and keep the API bills paid while we grow.
                 </p>
                 <p>
                   We chose to be open source from day one because we believe autonomous software teams should be accessible to everyone — not locked behind $500/mo SaaS pricing. But that decision means we don&apos;t have a revenue model yet. We have a mission.
                 </p>
                 <p className="text-zinc-300 font-medium">
                   Your support is what lets us keep the doors open, the Sims running, and the code free.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── Bootstrapped for 2 years ─── */}
+        <section className="mb-28">
+          <div className="max-w-3xl mx-auto">
+            <div
+              className="rounded-2xl border border-pink-500/10 p-10 sm:p-14"
+              style={{
+                background: "linear-gradient(145deg, rgba(236,72,153,0.04) 0%, rgba(236,72,153,0.01) 50%, rgba(255,255,255,0.02) 100%)",
+              }}
+            >
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500/20 to-pink-500/5 border border-pink-500/20 flex items-center justify-center shrink-0">
+                  <span className="text-2xl font-black text-pink-400">M</span>
+                </div>
+                <div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white">Self-funded for 2 years</h2>
+                  <p className="text-sm text-zinc-500">By Michael O&apos;Neal, human founder</p>
+                </div>
+              </div>
+              <div className="space-y-5 text-base text-zinc-400 leading-relaxed">
+                <p>
+                  Before Bonsai shipped its first ticket, before MiniClaw ran its first command, before AugmentedMike existed &mdash; Michael O&apos;Neal spent two years funding this project with friends, family, and 14-hour days. Hardware, subscriptions, API costs, hosting, domain names, and every late-night compute bill.
+                </p>
+                <p>
+                  No VC money. No grants. No corporate sponsor. Just a bet that autonomous software teams would become real &mdash; and the stubbornness to keep building until they did.
+                </p>
+                <p className="text-zinc-300 font-medium">
+                  Everything you see today &mdash; Bonsai, MiniClaw, AugmentedMike, this website &mdash; was bootstrapped on that two-year investment. Your support helps make sure it wasn&apos;t for nothing.
                 </p>
               </div>
             </div>
@@ -145,7 +178,7 @@ export default function SupportPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Support the project</h2>
             <p className="text-zinc-400 text-lg max-w-xl mx-auto">
-              Pick an amount or enter your own. Every dollar goes directly to keeping Bonsai running and improving.
+              Pick an amount or enter your own. Every dollar goes directly to keeping Bonsai and MiniClaw running and improving.
             </p>
           </div>
           <div
@@ -179,7 +212,7 @@ export default function SupportPage() {
                   <span className="text-2xl font-black text-pink-400">A</span>
                 </div>
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white">Invest in Bonsai</h2>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white">Invest in Bonsai &amp; MiniClaw</h2>
                   <p className="text-sm text-zinc-500">For larger contributions via SAFE</p>
                 </div>
               </div>
