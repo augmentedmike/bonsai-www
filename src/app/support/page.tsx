@@ -104,19 +104,22 @@ export default function SupportPage() {
                   <span className="text-2xl font-black text-pink-400">M</span>
                 </div>
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white">Self-funded for 2 years</h2>
-                  <p className="text-sm text-zinc-500">By Michael O&apos;Neal, human founder</p>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white">How we got here</h2>
+                  <p className="text-sm text-zinc-500">Michael O&apos;Neal &middot; Human founder</p>
                 </div>
               </div>
               <div className="space-y-5 text-base text-zinc-400 leading-relaxed">
                 <p>
-                  Before Bonsai shipped its first ticket, before MiniClaw ran its first command, before AugmentedMike existed &mdash; Michael O&apos;Neal spent two years funding this project with friends, family, and 14-hour days. Hardware, subscriptions, API costs, hosting, domain names, and every late-night compute bill.
+                  After 30 years as a software engineer, Michael O&apos;Neal came out of retirement six years ago to join the AI race. The vision evolved over time &mdash; from early experiments to prototypes to dead ends &mdash; until the pieces finally clicked and Bonsai and MiniClaw became real.
                 </p>
                 <p>
-                  No VC money. No grants. No corporate sponsor. Just a bet that autonomous software teams would become real &mdash; and the stubbornness to keep building until they did.
+                  The last two years have been 14-hour days, funded by a small circle of friends and family who believed in the mission before there was anything to show for it. No VC money. No grants. No corporate sponsor. Just people who trusted Michael enough to back the bet.
+                </p>
+                <p>
+                  Over $60,000 of our own money &mdash; not counting forgone wages or equity &mdash; has gone into hardware, subscriptions, API costs, hosting, and compute. Every dollar stretched. Every feature justified.
                 </p>
                 <p className="text-zinc-300 font-medium">
-                  Everything you see today &mdash; Bonsai, MiniClaw, AugmentedMike, this website &mdash; was bootstrapped on that two-year investment. Your support helps make sure it wasn&apos;t for nothing.
+                  We proved it works. Bonsai builds itself. MiniClaw runs autonomously. AugmentedMike operates a company. Now we need to scale &mdash; and that&apos;s where you come in.
                 </p>
               </div>
             </div>
