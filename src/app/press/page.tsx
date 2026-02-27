@@ -302,35 +302,33 @@ export default async function PressPage() {
                 href={latestPost.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col sm:flex-row items-center gap-8 rounded-2xl border border-pink-500/10 p-8 sm:p-10 hover:border-pink-500/20 transition-colors"
-                style={{
-                  background: "linear-gradient(145deg, rgba(236,72,153,0.04) 0%, rgba(236,72,153,0.01) 50%, rgba(255,255,255,0.02) 100%)",
-                }}
+                className="group relative block overflow-hidden rounded-3xl border border-white/10 bg-gray-900 transition-all hover:border-pink-500/30 hover:shadow-2xl hover:shadow-pink-500/10 hover:-translate-y-1"
               >
-                <div className="shrink-0 w-[140px] h-[216px] rounded-xl overflow-hidden border border-white/10 rotate-[-2deg] group-hover:rotate-0 transition-transform duration-300 shadow-lg">
+                <div className="relative aspect-[5/3] w-full overflow-hidden bg-gray-900">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={latestPost.thumbnail}
-                    alt={latestPost.title}
-                    width={600}
-                    height={928}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
+                    alt={`Latest comic — ${latestPost.title}`}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent" />
+                  <div className="absolute top-4 right-4 rounded-full bg-pink-500/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+                    Latest
+                  </div>
                 </div>
-                <div className="text-center sm:text-left">
-                  <p className="text-[11px] font-semibold uppercase tracking-widest text-pink-400 mb-3">Latest from the blog</p>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-pink-300 transition-colors">
-                    &ldquo;{latestPost.title}&rdquo;
-                  </h3>
-                  <p className="text-sm text-zinc-400 leading-relaxed mb-3">
-                    {latestPost.subtitle}
+                <div className="relative -mt-16 px-8 pb-8">
+                  <p className="text-xs font-medium uppercase tracking-widest text-pink-400">
+                    {latestPost.author}&apos;s Blog
                   </p>
-                  <span className="text-xs text-zinc-500">
-                    by {latestPost.author} &middot; {latestPost.date}
-                  </span>
-                  <div className="mt-3">
-                    <span className="text-sm text-pink-400 font-medium group-hover:text-pink-300 transition-colors">
+                  <h3 className="mt-2 text-2xl sm:text-3xl font-bold text-white">
+                    {latestPost.title}
+                  </h3>
+                  <p className="mt-2 text-base text-zinc-400">
+                    &ldquo;{latestPost.subtitle}&rdquo;
+                  </p>
+                  <div className="mt-4 flex items-center justify-between">
+                    <span className="text-sm text-zinc-600">{latestPost.date}</span>
+                    <span className="inline-flex items-center gap-1.5 text-sm font-medium text-pink-400 transition-transform group-hover:translate-x-1">
                       Read the comic &rarr;
                     </span>
                   </div>
