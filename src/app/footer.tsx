@@ -8,12 +8,12 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 mb-12">
 
           {/* Investors */}
-          <div>
+          <a href="/support" className="group block">
             <h4 className="text-[11px] font-semibold uppercase tracking-widest text-pink-400 mb-5">Investors</h4>
-            <p className="text-sm text-zinc-400 leading-relaxed">
+            <p className="text-sm text-zinc-400 leading-relaxed group-hover:text-zinc-300 transition-colors">
               SAFE agreements are available for early-stage investment. Standard YC SAFE terms &mdash; no board seats, no interest, converts at a future priced round.
             </p>
-          </div>
+          </a>
 
           {/* Press */}
           <div>
