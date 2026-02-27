@@ -126,6 +126,49 @@ export default function SupportPage() {
           </div>
         </section>
 
+        {/* ─── Not vaporware ─── */}
+        <section className="mb-28">
+          <div className="max-w-3xl mx-auto">
+            <div
+              className="rounded-2xl border border-cyan-400/10 p-10 sm:p-14"
+              style={{
+                background: "linear-gradient(145deg, rgba(0,229,255,0.04) 0%, rgba(0,229,255,0.01) 50%, rgba(255,255,255,0.02) 100%)",
+              }}
+            >
+              <h2 className="text-3xl font-bold text-white mb-6">We don&apos;t do vaporware.</h2>
+              <div className="space-y-5 text-base text-zinc-400 leading-relaxed">
+                <p>
+                  Everything we&apos;ve built is <strong className="text-white font-semibold">open source and live on GitHub right now</strong>. Not a pitch deck. Not a waitlist. Not a &ldquo;coming soon&rdquo; page. Real repositories with real commits, real issues, and real pull requests &mdash; most of them written by the AI team itself.
+                </p>
+                <p>
+                  You can clone it, run it, read every line, and decide for yourself if this is real. We publish in the open because we believe that&apos;s the only honest way to ask for support. No black boxes. No hand-waving. Just working software you can verify.
+                </p>
+                <p className="text-zinc-300 font-medium">
+                  We hate vaporware as much as you do. That&apos;s why we ship first and talk about it second.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4 mt-8">
+                <a
+                  href="https://github.com/augmentedmike/bonsai-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 rounded-xl text-sm font-semibold bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 hover:bg-cyan-400/20 transition-colors"
+                >
+                  Bonsai on GitHub &rarr;
+                </a>
+                <a
+                  href="https://github.com/augmentedmike/miniclaw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 rounded-xl text-sm font-semibold bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 hover:bg-cyan-400/20 transition-colors"
+                >
+                  MiniClaw on GitHub &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ─── Where the money goes ─── */}
         <section className="mb-28">
           <div className="max-w-3xl mx-auto">
